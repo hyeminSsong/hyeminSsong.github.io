@@ -1,24 +1,24 @@
-title: "My Blog"
-
-# 배너에 쓸 값
+title: "Hyemin Song’s Blog"
 name: "Hyemin Song"
 user_title: "Backend Developer"
 user_description: "Java/JS/SQL 좋아하는 개발자"
-
 email: "hyeminsSsong@example.com"
 
 url: "https://hyeminSsong.github.io"
 baseurl: ""
 
-remote_theme: ohduran/the-interesting-times
+# 테마 관련
+theme_settings:
+  author: "Hyemin Song"
+  description: "A newspaper-style developer blog."
+  contact_email: "hyeminsSsong@example.com"
+
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
-# (선택) 테마가 author.*를 참조할 수도 있어 대비
-# author:
-#  name: "Hyemin Song"
-
-# (선택) 프로필 이미지 경로
-# avatar: "/assets/img/profile.jpg"
+# 신문 테마가 필요로 하는 기본 경로
+collections:
+  posts:
+    output: true
