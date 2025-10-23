@@ -8,9 +8,9 @@ user_description: "Java/JS/SQL 좋아하는 개발자"
 email: "hyeminsSsong@example.com"
 
 url: "https://hyeminSsong.github.io"
-baseurl: "/git_test"
+baseurl: ""
 
-remote_theme: sujaykundu777/devlopr-jekyll
+remote_theme: ohduran/the-interesting-times
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
