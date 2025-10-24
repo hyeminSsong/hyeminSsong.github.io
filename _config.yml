@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Interesting Times....
+title: The Interesting Times..
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   May you come up with an interesting description..
@@ -56,7 +56,7 @@ collections:
 heros:
   - title: "Farewell to the Old Guard"
     image: "/assets/images/old_guard.jpg"
-    subtitle: "Napoleon’s Final Goodbye"
+    subtitle: "Napoleon's Final Goodbye"
     lead: "The Emperor of France and would-be ruler of Europe said goodbye to the Old Guard after his failed invasion of Russia and defeat by the Allies."
     date: "20/04/14"
     body: |
@@ -69,11 +69,11 @@ heros:
 
   - title: "The War of the Worlds"
     image: "/assets/images/Anti-War.png"
-    subtitle: "Orson Welles’ Broadcast Shocked a Nation"
+    subtitle: "Orson Welles' Broadcast Shocked a Nation"
     lead: "The fictional radio drama caused panic across America as listeners believed a Martian invasion was real."
     date: "30/10/38"
     body: |
-      Orson Welles’ adaptation of H.G. Wells’ novel ‘The War of the Worlds’ aired on CBS Radio,
+      Orson Welles' adaptation of H.G. Wells' novel 'The War of the Worlds' aired on CBS Radio,
       convincing thousands that aliens had landed on Earth.
       Streets emptied, phone lines jammed, and the power of media was revealed like never before.
       The chaos remains one of the most infamous moments in broadcast history.
@@ -88,7 +88,7 @@ heros:
       Hello, Chicago.
       If there is anyone out there who still doubts that America is a place where all things are possible,
       who still wonders if the dream of our founders is alive in our time, tonight is your answer.
-      Hope ? against fear, unity over division ? marked the beginning of a new chapter in modern democracy.
+      Hope - against fear, unity over division - marked the beginning of a new chapter in modern democracy.
     position: "right"
 
 # -----------------------
@@ -97,11 +97,11 @@ heros:
 columns:
   - title: "Digital Minimalism"
     image: "/assets/images/minimalism.jpg"
-    text: "A quiet resistance against the noise of the modern internet age. Cal Newport’s philosophy inspires many to reclaim focus in a distracted world."
+    text: "A quiet resistance against the noise of the modern internet age. Cal Newport's philosophy inspires many to reclaim focus in a distracted world."
 
-  - title: "Inside Tesla’s Neural Factory"
+  - title: "Inside Tesla's Neural Factory"
     image: "/assets/images/tesla.jpg"
-    text: "Inside the assembly lines of tomorrow ? how automation, neural networks, and human ingenuity reshape innovation."
+    text: "Inside the assembly lines of tomorrow - how automation, neural networks, and human ingenuity reshape innovation."
 
   - title: "The Art of Vinyl"
     image: "/assets/images/vinyl.jpg"
