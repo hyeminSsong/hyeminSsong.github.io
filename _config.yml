@@ -51,29 +51,29 @@ collections:
 
 
 # -----------------------
-# ? ¸ÞÀÎ 3´Ü ±â»ç (Hero Section)
+# Main article (Hero Section)
 # -----------------------
 heros:
   - title: "Farewell to the Old Guard"
     image: "/assets/images/old_guard.jpg"
-    subtitle: "Napoleon¡¯s Final Goodbye"
+    subtitle: "Napoleonâ€™s Final Goodbye"
     lead: "The Emperor of France and would-be ruler of Europe said goodbye to the Old Guard after his failed invasion of Russia and defeat by the Allies."
     date: "20/04/14"
     body: |
       Soldiers of my Old Guard: I bid you farewell.
       For twenty years I have constantly accompanied you on the road to honour and glory.
       In these latter times, as in the days of our prosperity, you have never ceased to be models of courage and fidelity.
-      With men such as you, our cause could not be lost; but the war has been too long, and the nation¡¯s strength is exhausted.
+      With men such as you, our cause could not be lost; but the war has been too long, and the nationï¿½ï¿½s strength is exhausted.
       I now go to join my son.
     position: "left"
 
   - title: "The War of the Worlds"
     image: "/assets/images/Anti-War.png"
-    subtitle: "Orson Welles¡¯ Broadcast Shocked a Nation"
+    subtitle: "Orson Wellesâ€™ Broadcast Shocked a Nation"
     lead: "The fictional radio drama caused panic across America as listeners believed a Martian invasion was real."
     date: "30/10/38"
     body: |
-      Orson Welles¡¯ adaptation of H.G. Wells¡¯ novel ¡®The War of the Worlds¡¯ aired on CBS Radio, 
+      Orson Wellesâ€™ adaptation of H.G. Wellsâ€™ novel â€˜The War of the Worldsâ€™ aired on CBS Radio,
       convincing thousands that aliens had landed on Earth.
       Streets emptied, phone lines jammed, and the power of media was revealed like never before.
       The chaos remains one of the most infamous moments in broadcast history.
@@ -92,14 +92,14 @@ heros:
     position: "right"
 
 # -----------------------
-# ? ÇÏ´Ü Masonry Articles (Columns Section)
+# Bottom Articles (Columns Section)
 # -----------------------
 columns:
   - title: "Digital Minimalism"
     image: "/assets/images/minimalism.jpg"
-    text: "A quiet resistance against the noise of the modern internet age. Cal Newport¡¯s philosophy inspires many to reclaim focus in a distracted world."
+    text: "A quiet resistance against the noise of the modern internet age. Cal Newportâ€™s philosophy inspires many to reclaim focus in a distracted world."
 
-  - title: "Inside Tesla¡¯s Neural Factory"
+  - title: "Inside Teslaâ€™s Neural Factory"
     image: "/assets/images/tesla.jpg"
     text: "Inside the assembly lines of tomorrow ? how automation, neural networks, and human ingenuity reshape innovation."
 
