@@ -294,8 +294,14 @@ a:hover {
   padding: 4px 10px;
 }
 
-.dropdown:hover .dropdown-menu {
+/*only content*/
+.top-nav li.dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/*no dropbox : github about news*/
+.top-nav li:not(.dropdown) .dropdown-menu {
+  display: none !important;
 }
 
 .dropdown-menu li a {
