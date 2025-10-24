@@ -1,9 +1,22 @@
 <article>
-  <h3><a href="{{ include.item.url | prepend: site.baseurl | prepend: site.url }}">{{ include.item.title }}</a></h3>
-  <img class="bw" src="{{ include.item.image }}">
-  {% if item.image_caption %}
-    <blockquote>{{ include.item.image_caption }}</blockquote>
+  <h3>{{ include.item.title }}</h3>
+  {% if include.item.subtitle %}
+    <h4 style="text-align:center; font-weight:normal;">{{ include.item.subtitle }}</h4>
   {% endif %}
-  <h6 style="margin: 0px;">{{ include.item.date | date:"%d/%m/%y"}}</h6>
-  {{ include.item.excerpt }}
+  
+  {% if include.item.image %}
+    <img src="{{ include.item.image }}" alt="{{ include.item.title }}">
+  {% endif %}
+  
+  {% if include.item.lead %}
+    <p style="font-style: italic;">{{ include.item.lead }}</p>
+  {% endif %}
+
+  {% if include.item.body %}
+    <blockquote>{{ include.item.body }}</blockquote>
+  {% endif %}
+
+  {% if include.item.date %}
+    <small style="display:block; text-align:right; color:#555;">{{ include.item.date }}</small>
+  {% endif %}
 </article>
