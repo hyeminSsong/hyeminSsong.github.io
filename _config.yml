@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Interesting Times..
+title: The Interesting Times
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  May you come up with an interesting description..
+  May you come up with an interesting description
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hyeminSsong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: 'UA-131540516-1' # Substitute this with your own GA key
@@ -42,14 +42,42 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# -----------------------
+# Navigation bar (Top menu)
+# -----------------------
+nav:
+  - name: "GITHUB"
+    url: "https://github.com/hyeminSsong"
+    target: "_blank"
+
+  - name: "게시글"
+    subitems:
+      - name: "Dev"
+        url: "/categories/dev/"
+      - name: "DB"
+        url: "/categories/db/"
+      - name: "OS"
+        url: "/categories/os/"
+      - name: "Net"
+        url: "/categories/net/"
+      - name: "Algo"
+        url: "/categories/algo/"
+      - name: "Thoughts"
+        url: "/categories/thoughts/"
+
+  - name: "About"
+    url: "/about/"
+
+  - name: "뉴스"
+    url: "/news/"
 
 # -----------------------
 # Main article (Hero Section)
 # -----------------------
 heros:
-  - title: "Farewell to the Old Guard"
+  - title: "Why I Build Systems That Listen"
     image: "/assets/images/old_guard.jpg"
-    subtitle: "Napoleon's Final Goodbye"
+    subtitle: "현장에서 배운 한가지, 이번주의 생각"
     lead: "The Emperor of France and would-be ruler of Europe said goodbye to the Old Guard after his failed invasion of Russia and defeat by the Allies."
     date: "20/04/14"
     body: |
@@ -60,16 +88,14 @@ heros:
       I now go to join my son.
     position: "left"
 
-  - title: "The War of the Worlds"
+  - title: "Editor’s Note"
     image: "/assets/images/Anti-War.png"
-    subtitle: "Orson Welles' Broadcast Shocked a Nation"
+    subtitle: "In a world full of data, she found meaning in patterns and people."
     lead: "The fictional radio drama caused panic across America as listeners believed a Martian invasion was real."
-    date: "30/10/38"
+    date: "24/10/25"
     body: |
-      Orson Welles' adaptation of H.G. Wells' novel 'The War of the Worlds' aired on CBS Radio,
-      convincing thousands that aliens had landed on Earth.
-      Streets emptied, phone lines jammed, and the power of media was revealed like never before.
-      The chaos remains one of the most infamous moments in broadcast history.
+      This page is written by Hyemin Song, a developer who believes every system tells a human story.
+      She writes about the invisible work behind everyday data.
     position: "center"
 
   - title: "Yes We Can"
@@ -83,26 +109,6 @@ heros:
       who still wonders if the dream of our founders is alive in our time, tonight is your answer.
       Hope - against fear, unity over division - marked the beginning of a new chapter in modern democracy.
     position: "right"
-
-# -----------------------
-# Bottom Articles (Columns Section)
-# -----------------------
-columns:
-  - title: "Digital Minimalism"
-    image: "/assets/images/minimalism.jpg"
-    text: "A quiet resistance against the noise of the modern internet age. Cal Newport's philosophy inspires many to reclaim focus in a distracted world."
-
-  - title: "Inside Tesla's Neural Factory"
-    image: "/assets/images/tesla.jpg"
-    text: "Inside the assembly lines of tomorrow - how automation, neural networks, and human ingenuity reshape innovation."
-
-  - title: "The Art of Vinyl"
-    image: "/assets/images/vinyl.jpg"
-    text: "Analog nostalgia meets digital precision: why people still find magic in spinning records."
-
-  - title: "The Future of Food"
-    image: "/assets/images/future_food.jpg"
-    text: "From lab-grown meat to vertical farms, a look into the sustainable plates of tomorrow."
 
 # Social media
 twitter: twitter

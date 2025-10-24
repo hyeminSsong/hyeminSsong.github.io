@@ -7,7 +7,34 @@
   {% else %}
   <div id="masthead">
     <h1>{{ site.title }}</h1>
-    <h6 style="text-align:center">{{ site.description }}</h6>
+   <!-- <h6 style="text-align:center">{{ site.description }}</h6> -->
   </div>
   {% endif %}
 </div>
+
+  <!-- 추가된 상단 네비게이션 영역 -->
+  <nav class="top-nav">
+    <ul>
+      {% for item in site.nav %}
+        {% if item.subitems %}
+          <li class="dropdown">
+            <a href="#">{{ item.name }} ▾</a>
+            <ul class="dropdown-menu">
+              {% for sub in item.subitems %}
+                <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ item.url }}"
+               {% if item.target %} target="{{ item.target }}" {% endif %}>
+               {{ item.name }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+
