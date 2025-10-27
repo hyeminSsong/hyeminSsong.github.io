@@ -517,3 +517,35 @@
 		}
 
 	}
+
+
+
+/* 단일 본문 (velog-style) */
+.post-single {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: "Georgia", serif;
+  column-count: 1 !important; /* newspaper-layout 3분단 제거 */
+  column-gap: 0 !important;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* 본문 이미지도 중앙 정렬 */
+.post-single img {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* 본문 제목 (본문 내 h2~h4) 스타일 */
+.post-single h2, 
+.post-single h3, 
+.post-single h4 {
+  margin-top: 2em;
+  border-left: 3px solid #000;
+  padding-left: 10px;
+  font-weight: bold;
+}	
