@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="newspaper-layout">
+  <h2 class="category-headline">{{ page.title }}</h2>
+  <hr>
+
+  {% assign posts = site.categories[page.category] | sort: "date" | reverse %}
+  {% if posts.size > 0 %}
+    <div class="news-grid">
+      {% for post in posts %}
+        <article class="news-card">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          {% endif %}
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="summary">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+          <small class="date">{{ post.date | date: "%Y.%m.%d" }}</small>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>아직 이 카테고리에 작성된 글이 없습니다.</p>
+  {% endif %}
+</div>

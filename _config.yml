@@ -124,3 +124,9 @@ include:
   - categories
   - categories/dev
   - categories/dev/all
+
+defaults:
+  - scope:
+      path: "categories"
+    values:
+      layout: "category"
