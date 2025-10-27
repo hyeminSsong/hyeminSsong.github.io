@@ -297,7 +297,7 @@ a:hover {
   z-index: 10;
 }
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: block !important;
 }
 
 .dropdown-menu li a {
