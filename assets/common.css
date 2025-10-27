@@ -274,6 +274,13 @@ a:hover {
 }
 
 /* dropbox : default none */
+.top-nav .dropdown-menu {
+  display: none !important;
+  flex-direction: column !important; 
+  justify-content: flex-start !important;
+}
+
+
 .dropdown-menu {
   display: none;                  /* default none */
   position: absolute;
