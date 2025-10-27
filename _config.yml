@@ -29,6 +29,7 @@ markdown: kramdown
 theme: null
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -117,11 +118,8 @@ linkedin: linkedin
 facebook: facebook
 
 # 페이지 개수
-plugins:
-  - jekyll-paginate-v2
-
 pagination:
   enabled: true
   per_page: 4
-paginate_path: "categories/:num"
+  paginate_path: "categories/:num"
 
