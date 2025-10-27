@@ -119,5 +119,6 @@ facebook: facebook
 
 # Pagination 설정 (jekyll-paginate 전용)
 paginate: 4             # 한 페이지에 보여줄 게시글 개수
-paginate_path: "/categories/dev/page:num"
 
+include:
+  - categories
