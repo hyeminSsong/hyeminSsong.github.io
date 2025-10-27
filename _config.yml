@@ -29,7 +29,7 @@ markdown: kramdown
 theme: null
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -117,9 +117,7 @@ github: github
 linkedin: linkedin
 facebook: facebook
 
-# 페이지 개수
-pagination:
-  enabled: true
-  per_page: 4
-  paginate_path: "categories/:num"
+# Pagination 설정 (jekyll-paginate 전용)
+paginate: 4             # 한 페이지에 보여줄 게시글 개수
+paginate_path: "/categories/dev/page:num"
 

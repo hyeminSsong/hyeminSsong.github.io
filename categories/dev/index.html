@@ -1,20 +1,19 @@
 ---
 layout: category
 title: "Dev"
-pagination:
-  enabled: true
-  categories:
-    - dev
-  permalink: /categories/dev/:num/
+category: dev
+paginate: 4
+paginate_path: "/categories/dev/page:num"
 ---
 
 <section class="newspaper-layout">
   <h2 class="category-headline">{{ page.title }}</h2>
   <hr>
 
-  {% if paginator.posts.size > 0 %}
+  {% assign posts = paginator.posts | where: "categories", "dev" %}
+  {% if posts.size > 0 %}
     <div class="news-grid">
-      {% for post in paginator.posts %}
+      {% for post in posts %}
       <article class="news-card">
         {% if post.image %}
           <img src="{{ post.image }}" alt="{{ post.title }}">

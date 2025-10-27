@@ -1,8 +1,7 @@
 ---
-layout: post
-title: "첫 Dev 글"
+title: "My first Jekyll Post"
 date: 2025-10-27
-categories: [dev]   # ← 복수형 categories 사용!!
-summary: "테스트 포스트입니다."
-image: /assets/images/sample.jpg
+categories: [dev]
+image: /assets/images/example.png
 ---
+이건 내 첫 번째 개발 관련 글이야.
