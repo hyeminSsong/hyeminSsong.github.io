@@ -334,9 +334,11 @@ a:hover {
 }
 
 
+
+
 /*inside the newspapaer*/
 .newspaper-layout {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
   font-family: "Georgia", serif;
@@ -344,21 +346,22 @@ a:hover {
 
 .category-headline {
   text-align: center;
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
 }
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr); /* 2개씩 가로 */
+  gap: 40px 30px; /* 세로 40px, 가로 30px 간격 */
 }
 
 .news-card {
   background: #fff;
   border-bottom: 1px solid #000;
-  padding-bottom: 15px;
+  padding: 10px;
 }
 
 .news-card img {
@@ -369,8 +372,8 @@ a:hover {
 }
 
 .news-card h3 {
-  font-size: 1.2em;
-  margin: 8px 0;
+  font-size: 1.1em;
+  margin: 5px 0;
   border-bottom: 1px solid #ddd;
 }
 
@@ -384,10 +387,9 @@ a:hover {
 }
 
 .news-card .summary {
-  color: #444;
+  color: #333;
   font-size: 0.95em;
   line-height: 1.4;
-  margin-bottom: 8px;
 }
 
 .news-card .date {
@@ -395,20 +397,5 @@ a:hover {
   text-align: right;
   color: #777;
   font-size: 0.85em;
-}
-
-.pagination {
-  text-align: center;
-  margin: 40px 0 60px;
-  font-family: "Times New Roman", serif;
-}
-
-.pagination a {
-  text-decoration: none;
-  color: #111;
-  margin-left: 10px;
-}
-
-.pagination a:hover {
-  text-decoration: underline;
+  margin-top: 8px;
 }

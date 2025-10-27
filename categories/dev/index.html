@@ -1,15 +1,19 @@
 ---
-layout: default
+layout: category
+title: "Dev"
+pagination:
+  enabled: true
+  category: "dev"
+  permalink: /categories/dev/:num/
 ---
 
 <section class="newspaper-layout">
   <h2 class="category-headline">{{ page.title }}</h2>
   <hr>
 
-  {% assign posts = site.posts | where: "category", page.category %}
-  {% if posts.size > 0 %}
+  {% if paginator.posts.size > 0 %}
     <div class="news-grid">
-      {% for post in posts %}
+      {% for post in paginator.posts %}
       <article class="news-card">
         {% if post.image %}
           <img src="{{ post.image }}" alt="{{ post.title }}">
@@ -31,6 +35,11 @@ layout: default
 
 <!-- 페이지 하단 네비게이션 -->
 <div class="pagination">
-  <span> -1- </span>
-  <a href="#">다음 ▶</a>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">◀ 이전</a>
+  {% endif %}
+  <span>- {{ paginator.page }} -</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">다음 ▶</a>
+  {% endif %}
 </div>
