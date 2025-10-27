@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "My first Jekyll Post"
 date: 2025-10-27
 categories: [dev]
