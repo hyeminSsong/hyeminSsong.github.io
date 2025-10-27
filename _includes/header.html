@@ -3,69 +3,77 @@
   <div id="masthead">
     <h3><a href="{{ site.baseurl | prepend: site.url}}">{{ site.title }}</a></h3>
   </div>
-
   {% else %}
   <div id="masthead">
     <h1>{{ site.title }}</h1>
-   <!-- <h6 style="text-align:center">{{ site.description }}</h6> -->
   </div>
   {% endif %}
 </div>
 
-  <!-- 추가된 상단 네비게이션 영역 -->
-  <nav class="top-nav">
-    <ul>
-      {% for item in site.nav %}
-        {% if item.subitems %}
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">{{ item.name }} ▾</a>
-            <ul class="dropdown-menu">
-              {% for sub in item.subitems %}
-                <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li>
-            <a href="{{ item.url }}"
-               {% if item.target %} target="{{ item.target }}" {% endif %}>
-               {{ item.name }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
+<!-- 상단 네비게이션 -->
+<nav class="top-nav">
+  <ul>
+    {% for item in site.nav %}
+      {% if item.subitems %}
+        <li class="dropdown">
+          <!-- ✅ class 추가 -->
+          <a href="#" class="dropdown-toggle">{{ item.name }} ▾</a>
+          <ul class="dropdown-menu">
+            {% for sub in item.subitems %}
+              <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li>
+          <a href="{{ item.url }}"
+             {% if item.target %} target="{{ item.target }}" {% endif %}>
+             {{ item.name }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const dropdown = document.querySelector(".dropdown");
-  const toggle = dropdown.querySelector(".dropdown-toggle");
-  let isLocked = false; // 클릭으로 고정 상태 여부
+  const dropdowns = document.querySelectorAll(".dropdown");
 
-  // Hover 시 (고정되지 않았을 때만)
-  dropdown.addEventListener("mouseenter", function() {
-    if (!isLocked) dropdown.classList.add("active");
-  });
+  dropdowns.forEach(function(dropdown) {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+    const menu = dropdown.querySelector(".dropdown-menu");
+    let isLocked = false;
+    let hideTimeout;
 
-  dropdown.addEventListener("mouseleave", function() {
-    if (!isLocked) dropdown.classList.remove("active");
-  });
+    // hover 시 표시
+    dropdown.addEventListener("mouseenter", function() {
+      clearTimeout(hideTimeout);
+      if (!isLocked) menu.classList.add("show");
+    });
 
-  // 클릭 시 고정 / 해제
-  toggle.addEventListener("click", function(event) {
-    event.preventDefault();
-    isLocked = !isLocked;
-    dropdown.classList.toggle("active", isLocked);
-  });
+    // hover 빠져나가면 천천히 사라짐
+    dropdown.addEventListener("mouseleave", function() {
+      if (!isLocked) {
+        hideTimeout = setTimeout(() => {
+          menu.classList.remove("show");
+        }, 250);
+      }
+    });
 
-  // 바깥 클릭 시 닫기
-  document.addEventListener("click", function(event) {
-    if (!dropdown.contains(event.target)) {
-      dropdown.classList.remove("active");
-      isLocked = false;
-    }
+    // 게시글 클릭 시 고정 / 해제
+    toggle.addEventListener("click", function(e) {
+      e.preventDefault();
+      isLocked = !isLocked;
+      menu.classList.toggle("show", isLocked);
+    });
+
+    // 바깥 클릭 시 닫힘
+    document.addEventListener("click", function(e) {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+        isLocked = false;
+      }
+    });
   });
 });
 </script>
-</div>
-
