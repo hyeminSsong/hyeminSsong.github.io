@@ -122,3 +122,5 @@ paginate: 4             # 한 페이지에 보여줄 게시글 개수
 
 include:
   - categories
+  - categories/dev
+  - categories/dev/all
