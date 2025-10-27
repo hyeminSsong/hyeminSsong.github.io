@@ -18,7 +18,7 @@
       {% for item in site.nav %}
         {% if item.subitems %}
           <li class="dropdown">
-            <a href="#">{{ item.name }} ▾</a>
+            <a href="#" class="dropdown-toggle">{{ item.name }} ▾</a>
             <ul class="dropdown-menu">
               {% for sub in item.subitems %}
                 <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
@@ -39,20 +39,23 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const dropdown = document.querySelector(".dropdown");
-  const link = dropdown.querySelector("a");
-  let isLocked = false;
+  const toggle = dropdown.querySelector(".dropdown-toggle");
+  let isLocked = false; // 클릭으로 고정 상태 여부
 
-  // 게시글 클릭 시 고정/해제
-  link.addEventListener("click", function(event) {
+  // Hover 시 (고정되지 않았을 때만)
+  dropdown.addEventListener("mouseenter", function() {
+    if (!isLocked) dropdown.classList.add("active");
+  });
+
+  dropdown.addEventListener("mouseleave", function() {
+    if (!isLocked) dropdown.classList.remove("active");
+  });
+
+  // 클릭 시 고정 / 해제
+  toggle.addEventListener("click", function(event) {
     event.preventDefault();
-
-    if (isLocked) {
-      dropdown.classList.remove("active");
-      isLocked = false;
-    } else {
-      dropdown.classList.add("active");
-      isLocked = true;
-    }
+    isLocked = !isLocked;
+    dropdown.classList.toggle("active", isLocked);
   });
 
   // 바깥 클릭 시 닫기

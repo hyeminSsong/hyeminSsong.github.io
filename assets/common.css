@@ -282,7 +282,8 @@ a:hover {
 
 
 .dropdown-menu {
-  display: block;                  /* default none */
+  display: flex;
+  flex-direction: column;                 
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
