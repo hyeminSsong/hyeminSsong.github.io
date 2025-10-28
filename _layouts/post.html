@@ -14,7 +14,7 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.image % and include.page.image != ""%}
+  {% if page.image % and page.image != ""%}
     <div style="text-align:center; margin:1.5em 0;">
       <img src="{{ page.image }}" alt="{{ page.title }}" style="max-width:100%; height:auto;">
     </div>
