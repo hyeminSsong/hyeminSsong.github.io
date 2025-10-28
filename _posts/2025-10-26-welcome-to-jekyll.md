@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "My first Jekyll Post"
-date: 2025-10-27
+date: 2025-10-26
 categories: dev
 image: /assets/images/example.png
 ---
