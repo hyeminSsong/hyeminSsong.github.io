@@ -14,10 +14,8 @@
   
   {% if include.item.image and include.item.image != ""%}
     <div style="text-align:center; margin: 1.5em 0;">
-      <img src="{{ include.item.image }}" alt="{{ include.item.title }}" style="max-width:100%; height:auto;">
+      <img src="{{ include.item.image | strip}}" alt="{{ include.item.title }}" style="max-width:100%; height:auto;">
     </div>
-  {% else %}
-  <div style="margin: 0;"></div>
   {% endif %}
 
 
