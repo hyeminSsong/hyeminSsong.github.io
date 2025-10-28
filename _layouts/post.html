@@ -1,19 +1,32 @@
 ---
 layout: default
 ---
-<article>
+<article class="{{ page.post_style | default: 'post-single' }}">
+ <header>
+    <h1 style="font-family:'Georgia',serif; font-weight:bold; text-align:center;">
+      {{ page.title }}
+    </h1>
 
-			<header>
-				<h1>{{ page.title }}</h1>
-        <br>
-        <div class="item">
-          <img {% if item.image_bw %}class="bw"{% endif %} src="{{ page.image }}">
-        </div>
-        <br>
-				<h4>{{ page.description }}</h4>
-        <br>
-			</header>
+    {% if page.subtitle %}
+      <h4 style="text-align:center; font-weight:normal; color:#777;">
+        {{ page.subtitle }}
+      </h4>
+    {% endif %}
+  </header>
 
-      {{ content }}
+  {% if page.image %}
+    <div style="text-align:center; margin:1.5em 0;">
+      <img src="{{ page.image }}" alt="{{ page.title }}" style="max-width:100%; height:auto;">
+    </div>
+  {% endif %}
 
-		</article>
+  <div class="post-content" style="font-family:'Georgia',serif; color:#333; line-height:1.8;">
+    {{ content }}
+  </div>
+
+  {% if page.date %}
+    <small style="display:block; text-align:right; margin-top:1em; color:#888;">
+      {{ page.date | date: "%Y-%m-%d" }}
+    </small>
+  {% endif %}
+</article>
