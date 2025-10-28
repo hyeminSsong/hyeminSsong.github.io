@@ -1,22 +1,39 @@
-<article>
-  <h3>{{ include.item.title }}</h3>
+<article style="max-width:800px; margin: 0 auto; padding:1.5em 0; border-bottom: 1px solid #ddd; column-count: 1 !important;">
+ 
+  {% if include.item.title %}
+  <h3 style="font-family: 'Georgia', serif; font-weight: bold; text-align: center;">
+    {{ include.item.title }}
+  </h3>
+  {% endif %}
+ 
   {% if include.item.subtitle %}
-    <h4 style="text-align:center; font-weight:normal;">{{ include.item.subtitle }}</h4>
+    <h4 style="text-align:center; font-weight:normal; color:#777;">
+      {{ include.item.subtitle }}
+    </h4>
   {% endif %}
   
   {% if include.item.image %}
-    <img src="{{ include.item.image }}" alt="{{ include.item.title }}">
+    <div style="text-align:center; margin: 1.5em 0;">
+      <img src="{{ include.item.image }}" alt="{{ include.item.title }}" style="max-width:100%; height:auto;">
+    </div>
   {% endif %}
   
   {% if include.item.lead %}
-    <p style="font-style: italic;">{{ include.item.lead }}</p>
+    <p style="font-style: italic; text-align: center; color:#555;">
+      {{ include.item.lead }}
+    </p>
   {% endif %}
 
   {% if include.item.body %}
-    <blockquote style="white-space: pre-line; line-height:1.6em; font-family:'Georgia',serif;">{{ include.item.body }}</blockquote>
+    <div style="white-space: pre-line; line-height: 1.8em; font-family: 'Georgia', serif; color:#333;">
+      {{ include.item.body }}
+    </div>
   {% endif %}
 
   {% if include.item.date %}
-    <small style="display:block; text-align:right; color:#555;">{{ include.item.date }}</small>
+    <small style="display:block; text-align:right; margin-top: 1em; color:#888;">
+      {{ include.item.date }}
+    </small>
   {% endif %}
+
 </article>
