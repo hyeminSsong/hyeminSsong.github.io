@@ -15,7 +15,7 @@ baseurl: ""
 username: hyeminssong
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Thanks for stopping by
+typing_text: Thanks for stopping by-
 # email: Your E-Mail address for the email button.
 email: email@example.com
 # For every social button you want to display, set your username or userid
@@ -35,7 +35,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: 안녕하세요. 일을 하며 배운 것과 생각을 기록하는 개발자입니다. 완벽하지 않아도, 어제보다 조금 더 이해한 오늘을 남깁니다. per ardua ad astra <a class="highlight-link" href="https://github.com/hyeminSsong/hyeminSsong.github.io/" target="_blank" rel="noreferrer">♡</a>.
+about_me_description: 안녕하세요. 일을 하며 배운 것과 생각을 기록하는 개발자입니다. </br>완벽하지 않아도, 어제보다 조금 더 이해한 오늘을 남깁니다. </br>per ardua ad astra <a class="highlight-link" href="https://github.com/hyeminSsong/hyeminSsong.github.io/" target="_blank" rel="noreferrer">♡</a>.
 
 # SKILLS SECTION
 # show_skills_card:
