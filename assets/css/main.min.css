@@ -97,7 +97,7 @@ a:hover {
 #preloader {
     -ms-flex-align: center;
     align-items: center;
-    background: #2b2d2f;
+    background: #000;
     display: -ms-flexbox;
     display: flex;
     height: 100%;
