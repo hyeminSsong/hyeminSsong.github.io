@@ -82,11 +82,11 @@ a:hover {
 
 .neumorphism-button {
     background: linear-gradient(145deg, hsla(240, 2%, 40%, .15) 15%, rgba(33, 33, 33, .4) 80%);
-    box-shadow: -4px -3px 2px 0 hsla(0, 0%, 98%, .13), 4px 4px 2px 0 rgba(0, 0, 0, .4)
+    /*box-shadow: -4px -3px 2px 0 hsla(0, 0%, 98%, .13), 4px 4px 2px 0 rgba(0, 0, 0, .4)*/
 }
 
 .neumorphism-card {
-    box-shadow: inset 2px 2px 4px #000, inset -2px -2px 4px #636363
+   /* box-shadow: inset 2px 2px 4px #000, inset -2px -2px 4px #636363*/
 }
 
 .neumorphism-card-big {
