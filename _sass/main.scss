@@ -400,8 +400,12 @@ a {
 }
 /* About me Section */
 #aboutMe {
-  align-items: center;
+  text-align: center;
   background-color: #d5d5d5;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 100px 0 40px 0;
 
   h1 {
     color:#121d95
