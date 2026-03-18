@@ -398,7 +398,19 @@ a {
     }
   }
 }
+/* About me Section */
+#aboutMe {
+  align-items: center;
+  background-color: #d5d5d5;
 
+  h1 {
+    color:#121d95
+  }
+
+  p {
+    color:#000
+  }
+}
 /* Skills Section */
 
 #skills {
