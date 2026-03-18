@@ -57,7 +57,7 @@ a:hover {
 
 .highlight-title {
     color: #ff073a;
-    text-shadow: .25rem .25rem .25rem #ff073a
+/*    text-shadow: .25rem .25rem .25rem #ff073a*/
 }
 
 .highlight-link {
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .layout .card {
-    background: linear-gradient(145deg, hsla(0, 0%, 45%, .15) 15%, #2b2d2f 80%);
+    /*background: linear-gradient(145deg, hsla(0, 0%, 45%, .15) 15%, #2b2d2f 80%);*/
     border-radius: 2rem;
     margin: 3rem 0;
     padding: 1rem 2rem
