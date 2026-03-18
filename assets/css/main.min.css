@@ -354,6 +354,21 @@ a:hover {
     }
 }
 
+/* About me Section */
+#aboutMe {
+  align-items: center;
+  background-color: #d5d5d5;
+}
+
+#aboutMe h1 {
+    color:#121d95
+}
+
+#aboutMe p {
+    color:#000
+}
+
+/* #skills Section */
 #skills {
     -ms-flex-align: center;
     align-items: center;
