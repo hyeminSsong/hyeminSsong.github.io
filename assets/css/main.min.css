@@ -628,8 +628,8 @@ a:hover {
 
 @media only screen and (min-width:48em) {
     .layout {
-        margin: .5rem auto;
-        padding: 2rem
+        /*margin: .5rem auto;
+        padding: 2rem*/
     }
 
     .layout .card .description,
