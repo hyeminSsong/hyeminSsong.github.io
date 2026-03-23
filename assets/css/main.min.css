@@ -77,7 +77,7 @@ a:hover {
 .layout {
     margin: 0;
     /*max-width: 75em;*/
-    padding: .5rem
+    /*padding: .5rem*/
 }
 
 .layout .card {
@@ -799,11 +799,11 @@ a:hover {
 
 @media only screen and (min-width:62em) {
     .layout {
-        padding: 3rem
+        /*padding: 3rem*/
     }
 
     .layout .card {
-        padding: 1rem 3rem
+        /*padding: 1rem 3rem*/
     }
 
     #skills .filter-button {
@@ -826,7 +826,7 @@ a:hover {
 
 @media only screen and (min-width:75em) {
     .layout {
-        padding: 5rem
+        /*padding: 5rem*/
     }
 
     #skills .filter-button {
