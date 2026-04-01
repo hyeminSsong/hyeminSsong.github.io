@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="manifest" href="{{ "/assets/favicon/site.webmanifest" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/vendors.min.css" | prepend: site.baseurl }}">
+
+  <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+</head>
+
+<body>
+  <!-- 로딩 애니메이션 (position: fixed 로 스냅 컨테이너 위에 오버레이) -->
+  <div id="preloader">
+    <div class="load">
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+    </div>
+  </div>
+
+  <!--
+    ┌─────────────────────────────────────────────────────┐
+    │  .snap-container                                    │
+    │  height: 100vh / overflow-y: scroll                 │
+    │  scroll-snap-type: y mandatory                      │
+    │                                                     │
+    │  각 .snap-section 은 height: 100vh 를 차지하며      │
+    │  scroll-snap-align: start 으로 정확히 정렬됩니다.   │
+    └─────────────────────────────────────────────────────┘
+  -->
+  <main class="snap-container">
+
+    <!-- ① About Me — 파란색 배경 / 흰색 텍스트 -->
+    <section class="snap-section section-aboutme">
+      <div class="section-inner">
+        {% include landing-page.html %}
+        {%if site.show_aboutme_card %}
+          {% include section-aboutme.html %}
+        {% endif %}
+      </div>
+      <!-- 스크롤 유도 화살표 (바운스 애니메이션) -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="scroll-cue__arrow"></span>
+      </div>
+    </section>
+
+    <!-- ② Skills — 노란색 배경 / 검은색 텍스트 -->
+    {%if site.show_skills_card %}
+    <section class="snap-section section-skills">
+      <div class="section-inner">
+        {% include section-skills.html %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ③ Projects — 주황색 배경 / 검은색 텍스트 -->
+    {%if site.show_projects_card %}
+    <section class="snap-section section-projects">
+      <div class="section-inner">
+        {% include section-projects.html %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ④ Open Source Projects — 흰색 배경 / 검은색 텍스트 -->
+    {%if site.show_projects_card %}
+    <section class="snap-section section-os-projects">
+      <div class="section-inner">
+        {% include section-os-projects.html %}
+      </div>
+    </section>
+    {% endif %}
+
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
