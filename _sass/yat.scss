@@ -88,3 +88,12 @@ $on-laptop:        800px !default;
   "misc/gitment",
   "misc/click-to-top"
 ;
+
+.site-brand-inner {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.site-brand-inner:hover {
+  transform: scale(1.08);
+}
