@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [DB]사내 채팅 서비스 설계
+title: "[DB]사내 채팅 서비스 설계"
 subtitle: 
 author: Hye min Song
 categories: jekyll
