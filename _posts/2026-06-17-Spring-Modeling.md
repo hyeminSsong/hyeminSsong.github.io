@@ -24,15 +24,18 @@ sidebar: []
 
 스프링 기본 구조는 이렇다.
 내가 왔다갔다 하면서 확인하기 위해 남겨둔다.
+</br>
 
 1. Controller
 - 화면(프론트)에서 요청 받는다.
 - Request DTO 나 파라미터를 Service 전달한다.
 </br>
+
 2. Request DTO
 - 화면에서 넘어온 데이터를 담는 객체
 - 조회조건, 등록정보 등을 한 번에 전달하기 위해 사용 (하나 이상??)
 </br>
+
 3. Service (? 아직 모르겠음)
 - 업무로직 처리
 - 검증
@@ -40,21 +43,27 @@ sidebar: []
 - 여러 Respository 호출
 - Entity -> 
 </br>
+
 4. Respository
 - DB 접근 담당
-</BR>
+</br>
+
 ---------------- DB ----------------
-</BR>
+</br>
+
 6. Entity
 - DB 테이블과 매핑되는 객체
 - 조회 결과 담음
-</BR>
+</br>
+
 7. Response DTO
 - 화면에서 내려줄 데이터만 담는 객체
 - Entity 전체를 노출하지 않기 위해 사용
 </br>
+
 8. Controller
 - Response DTO를 JSON 형태로 반환
-</BR>
+</br>
+
 9. JSON
 - 화면(프론트)로 전달
