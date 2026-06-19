@@ -20,7 +20,7 @@ tags: 사내채팅서비스 DB Spring DTO Entity Controller
 top: 1
 sidebar: []
 ---
-![example image](/assets/images/post/5_Spring.png "작고 소듕한..")
+![example image](/assets/images/post/6_Swagger.png "수웨거")
 
 채팅 프로젝트 API를 테스트하기 위해 Swagger를 적용해보기로 했다.
 
