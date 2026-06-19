@@ -5,7 +5,7 @@ subtitle:
 author: Hye min Song
 categories: jekyll
 banner:
-  #video: https://vjs.zencdn.net/v/oceans.mp4
+  #video: /assets/images/post/6_Swagger.png
   loop: true
   volume: 0.8
   start_at: 8.5

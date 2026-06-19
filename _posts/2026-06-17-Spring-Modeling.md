@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "[Spring]사내 채팅 서비스 설계"
+title: "[사내 채팅 서비스]Spring 설계"
 subtitle: 
 author: Hye min Song
 categories: jekyll
 banner:
-  #video: https://vjs.zencdn.net/v/oceans.mp4
+  #video: /assets/images/post/5_Spring.png
   loop: true
   volume: 0.8
   start_at: 8.5
